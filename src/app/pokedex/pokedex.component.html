@@ -1,0 +1,25 @@
+<h1>Angular Pokédex</h1>
+
+<hr>
+
+<div class="pokedex">
+  <a class="pokedex-pokemon" *ngFor="let p of pokemon_list" routerLink="/pokemon/{{p.name}}">
+    <div class="pokedex-pokemon-id">
+      #{{ p.id }}
+    </div>
+    <img [ngClass]="{'hidden': !p.image_loaded}" class="pokedex-pokemon-sprite" (load)="p.image_loaded = true" [attr.src]="p.icon">
+    <div class="pokedex-pokemon-name">
+      {{ p.name | capitalize }}
+    </div>
+  </a>
+</div>
+
+<button class="load-button" (click)="loadMore()" [disabled]="is_loading">
+  <span *ngIf="!error">
+    <span *ngIf="is_loading">Loading...</span>
+    <span *ngIf="!is_loading">Load more</span>
+  </span>
+  <span *ngIf="error">
+    Loading failed
+  </span>
+</button>
