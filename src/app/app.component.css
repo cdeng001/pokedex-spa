@@ -1,0 +1,13 @@
+nav{
+    background-color: red;
+    overflow: hidden;
+}
+
+nav a{
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}

@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: scroll;
+    height: 650px;
   }
 
   a,
@@ -12,7 +14,7 @@
   }
   
   .pokedex-pokemon {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(228, 228, 228);
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -20,6 +22,13 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 2px;
     text-decoration: none;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20px;
+
+    -webkit-flex-grow: 1;
+    -webkit-flex-shrink: 1;
   }
   
   .pokedex-pokemon-id {

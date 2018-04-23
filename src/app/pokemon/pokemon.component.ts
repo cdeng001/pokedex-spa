@@ -27,7 +27,6 @@ export class PokemonComponent implements OnInit {
     const name = this.route.snapshot.paramMap.get('name');
     this.pokemonService.getPokemonData(name)
       .then( response => {
-        console.log(response);
         this.pokemon = new Pokemon(
           response.id,
           response.name,
@@ -36,17 +35,18 @@ export class PokemonComponent implements OnInit {
           response.is_default,
           response.order,
           response.weight,
-          //response.abilities:,
-          //response.forms:,
-          //response.game_indices:,
-          //response.held_items:,
+          response.abilities,
+          response.forms,
+          response.game_indices,
+          response.held_items,
           response.location_area_encounters,
-          //response.moves:,
-          //response.sprites:,
-          //response.species:,
-          //response.stats:,
-          //response.types:
+          response.moves,
+          response.sprites,
+          response.species,
+          response.stats,
+          response.types
         );
+        console.log(this.pokemon);
       });
 
   }

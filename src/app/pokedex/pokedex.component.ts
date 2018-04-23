@@ -43,6 +43,13 @@ export class PokedexComponent implements OnInit {
       });
   }
 
+  onScroll(event) {
+    let target = event.target;
+    if(target.scrollTop + target.offsetHeight >= target.scrollHeight) {
+      this.loadMore();
+    }
+  }
+
   ngOnInit() {
     this.loadMore();
   }

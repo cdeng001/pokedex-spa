@@ -6,16 +6,16 @@ export class Pokemon {
     is_default: boolean;
     order: number;
     weight: number;
-    //abilities:
-    //forms:
-    //game_indices:
-    //held_items:
+    abilities: object[];
+    forms: object[];
+    game_indices: object[];
+    held_items: object[];
     location_area_encounters: string;
-    //moves:
-    //sprites:
-    //species:
-    //stats:
-    //types:
+    moves: object[];
+    sprites: object;
+    species: object;
+    stats: object[];
+    types: object[];
 
     constructor(
       id: number,
@@ -25,16 +25,16 @@ export class Pokemon {
       is_default: boolean,
       order: number,
       weight: number,
-      //abilities:,
-      //forms:,
-      //game_indices:,
-      //held_items:,
+      abilities: object[],
+      forms: object[],
+      game_indices: object[],
+      held_items: object[],
       location_area_encounters: string,
-      //moves:,
-      //sprites:,
-      //species:,
-      //stats:,
-      //types:
+      moves: object[],
+      sprites: object,
+      species: object,
+      stats: object[],
+      types: object[]
     ){
       this.id = id;
       this.name = name;
@@ -43,15 +43,15 @@ export class Pokemon {
       this.is_default = is_default;
       this.order = order;
       this.weight = weight;
-      //this.abilities:
-      //this.forms:
-      //this.game_indices:
-      //this.held_items:
+      this.abilities = abilities;
+      this.forms = forms;
+      this.game_indices = game_indices;
+      this.held_items = held_items;
       this.location_area_encounters = location_area_encounters;
-      //this.moves:
-      //this.sprites:
-      //this.species:
-      //this.stats:
-      //this.types:
+      this.moves = moves;
+      this.sprites = sprites;
+      this.species = species;
+      this.stats = stats;
+      this.types = types;
     }
   }

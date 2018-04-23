@@ -2,7 +2,7 @@
 
 <hr>
 
-<div class="pokedex">
+<div class="pokedex" (scroll)="onScroll($event)">
   <a class="pokedex-pokemon" *ngFor="let p of pokemon_list" routerLink="/pokemon/{{p.name}}">
     <div class="pokedex-pokemon-id">
       #{{ p.id }}
@@ -13,13 +13,3 @@
     </div>
   </a>
 </div>
-
-<button class="load-button" (click)="loadMore()" [disabled]="is_loading">
-  <span *ngIf="!error">
-    <span *ngIf="is_loading">Loading...</span>
-    <span *ngIf="!is_loading">Load more</span>
-  </span>
-  <span *ngIf="error">
-    Loading failed
-  </span>
-</button>
