@@ -48,7 +48,10 @@ export class PokemonComponent implements OnInit {
         );
         console.log(this.pokemon);
       });
-
+    this.pokemonService.getPokemonFormat(name)
+      .then( response => {
+        console.log(response);
+      });
   }
 
 }
